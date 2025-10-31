@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Calculator | Prasanth</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- 🌙 Theme Switch -->
+    <div class="theme-toggle">
+      <input type="checkbox" id="theme-switch">
+      <label for="theme-switch">🌙 / ☀️</label>
+    </div>
+
+    <!-- 🧮 Calculator -->
+    <div class="container">
+      <fieldset id="container">
+        <h1>🧮 Modern Calculator</h1>
+        <hr />
+
+        <form name="calculator">
+          <input id="display" type="text" name="display" readonly />
+
+          <!-- Basic Buttons -->
+          <div class="buttons">
+            <input class="btn" type="button" value="7" onclick="calculator.display.value += '7'" />
+            <input class="btn" type="button" value="8" onclick="calculator.display.value += '8'" />
+            <input class="btn" type="button" value="9" onclick="calculator.display.value += '9'" />
+            <input class="btn op" type="button" value="+" onclick="calculator.display.value += '+'" />
+
+            <input class="btn" type="button" value="4" onclick="calculator.display.value += '4'" />
+            <input class="btn" type="button" value="5" onclick="calculator.display.value += '5'" />
+            <input class="btn" type="button" value="6" onclick="calculator.display.value += '6'" />
+            <input class="btn op" type="button" value="-" onclick="calculator.display.value += '-'" />
+
+            <input class="btn" type="button" value="1" onclick="calculator.display.value += '1'" />
+            <input class="btn" type="button" value="2" onclick="calculator.display.value += '2'" />
+            <input class="btn" type="button" value="3" onclick="calculator.display.value += '3'" />
+            <input class="btn op" type="button" value="×" onclick="calculator.display.value += '*'" />
+
+            <input class="btn clear" type="button" value="C" onclick="calculator.display.value = ''" />
+            <input class="btn" type="button" value="0" onclick="calculator.display.value += '0'" />
+            <input class="btn eq" type="button" value="=" onclick="calculator.display.value = eval(calculator.display.value)" />
+            <input class="btn op" type="button" value="÷" onclick="calculator.display.value += '/'" />
+          </div>
+
+          <!-- Scientific Toggle -->
+          <div class="toggle-scientific">
+            <input type="checkbox" id="sci-toggle">
+            <label for="sci-toggle">🔬 Scientific Mode</label>
+          </div>
+
+          <!-- Scientific Buttons -->
+          <div class="sci-buttons">
+            <input class="btn sci" type="button" value="sin" />
+            <input class="btn sci" type="button" value="cos" />
+            <input class="btn sci" type="button" value="tan" />
+            <input class="btn sci" type="button" value="log" />
+            <input class="btn sci" type="button" value="π" />
+            <input class="btn sci" type="button" value="e" />
+          </div>
+        </form>
+      </fieldset>
+    </div>
+
+    <footer>
+      <p>⚡ Built by Attipalli Sai Prasanth Reddy | GitHub 💻</p>
+    </footer>
+
+    <!-- 🌈 Scripts -->
+    <script>
+      const toggle = document.getElementById('theme-switch');
+      toggle.addEventListener('change', () => {
+        document.body.classList.toggle('light');
+      });
+    </script>
+  </body>
+</html>
